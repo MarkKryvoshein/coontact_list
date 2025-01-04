@@ -2,9 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>A Contact's List</title>
+    <style>
+ body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f9;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    tr:hover {
+        background-color: #f1f1f1;
+    }
+
+ </style>
 </head>
 <body>
+    <h1>A Contact's List</h1>
+    <div class = "table_contacts"></div>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Phone</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <th>mark</th>
+                <th>mark</th>
+                <th>+380321324</th>
+                <th>kwaekawjfja@gmail.com</th>
+            </tr>
+        </tbody>
+    </table>
+    <div class = "buttons">
+        <ul>
+            <li><button>New contact</button></li>
+            <li>Edit contact</li>
+            <li>Delete contact</li>
+            <li>About contact</li>
+            <li>Display</li>
+        </ul>
+
+
+    </div>
+
 
 </body>
 </html>
