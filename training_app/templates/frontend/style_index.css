@@ -1,0 +1,40 @@
+body {
+    background-color: #f8f9fa;
+}
+.contacts-table {
+    margin: 40px auto;
+    max-width: 900px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    color: #007BFF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+table th {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+}
+table tr:hover {
+    background-color: #f1f1f1;
+}
+.contact-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+.btn-sm {
+    font-size: 14px;
+    padding: 5px 1     }

@@ -1,64 +1,154 @@
+/* Загальний стиль */
+
 body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        background-color: #f4f4f9;
-    }
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f9;
+}
 
-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-        background-color: #ffffff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-th, td {
-        padding: 15px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
-
-th {
-        background-color: #4CAF50;
-        color: white;
-    }
-
-tr:hover {
-       background-color: #f1f1f1;
-    }
-.action-buttons {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-left: 1px solid #dee2e6;
-        }
-
+/* Контейнер для таблиці та кнопок */
 .main-container {
-            display: flex;
-            height: 100vh;
-            margin-top: 20px;
-        }
+    display: flex;
+    gap: 20px;
+    height: 100vh;
+    margin-top: 20px;
+}
 
+/* Стилізація таблиці */
 .contacts-table {
-            flex: 2;
-            overflow-y: auto;
-        }
+    flex: 2;
+    overflow-y: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+}
 
+/* Стилізація заголовку */
+h2 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Основні стилі таблиці */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стиль заголовків таблиці */
+th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Стиль клітинок */
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Чергування кольорів рядків */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Ефект при наведенні */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Фото у таблиці */
+.contact-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+/* Блок кнопок дій */
 .action-buttons {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-left: 1px solid #dee2e6;
-        }
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 
+/* Кнопки */
 .action-buttons a {
-            width: 100%;
-        }
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Кнопка редагування */
+.edit-btn {
+    background-color: #007BFF;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Кнопка видалення */
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #a71d2a;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .action-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .action-buttons a {
+        width: auto;
+        padding: 8px 15px;
+    }
+}
+.main_container {
+    display: flex;
+    justify-content: space-between; /* Рівномірно розподіляє простір */
+    gap: 20px; /* Відступ між блоками */
+}
+
+.something {
+    width: 30%;
+    background-color: #e9ecef;
+    padding: 20px;
+}

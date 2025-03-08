@@ -1,33 +1,50 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}Contact List{% endblock %}
 {% block content %}
-<div class="container-fluid main-container">
         <!-- Left section: Contacts Table -->
-        <div class="contacts-table">
-            <h2 class="text-center">Contacts</h2>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>John Doe</td>
-                        <td>+123456789</td>
-                        <td>johndoe@example.com</td>
-                    </tr>
-                    <tr>
-                        <td>Jane Smith</td>
-                        <td>+987654321</td>
-                        <td>janesmith@example.com</td>
-                    </tr>
-                    <!-- Add more rows as needed -->
-                </tbody>
-            </table>
-        </div>
+<div class="main_container">
+    <div class="contacts-table">
+        <h2 class="text-center">Contacts</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Photo</th>
+                    <th scope="col">Lastname</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contact in contacts %}
+                <tr>
+                    <td>
+                        {% if contact.photo  %}
+                        <img src="{{ contact.photo.url }}" alt="Contacts_photo" width="50">
+                        {% else  %}
+                        <img src="/media/img.png" alt="Default_photo" width="50">
+                        {% endif %}
+                    </td>
+                    <td>{{ contact.last_name }}</td>
+                    <td>{{ contact.first_name }}</td>
+                    <td>{{ contact.phone }}</td>
+                    <td>{{ contact.email }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="something">
+        <h1>Create</h1>
+        <a class="nav-link active" href="add_contact">
+            <img src="{% static 'svg/icons.svg' %}" width="25px"/>
+
+
+        </a>
+    </div>
 </div>
+
 
 {% endblock %}
