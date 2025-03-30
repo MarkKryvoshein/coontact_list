@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About {{ contact.first_name }} {% endblock %}
+{% block content %}
+
+<div class="profile-card">
+        <div class="photo-circle">
+            <img src="{{ contact.photo.url }}" alt="Contacts_photo" width="50">
+        </div>
+        <div class="personal-info">
+            <div class="name">{{ contact.first_name }}</div>
+            <div class="last-name">{{ contact.last_name}}</div>
+            <div class="email">{{ contact.email }}</div>
+            <div class="phone-line">{{ contact.phone }}</div>
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -6,7 +6,7 @@ class Contact(models.Model):
     last_name = models.CharField(max_length=50)
     phone = models.CharField(max_length=15)
     email = models.EmailField()
-    photo = models.ImageField(upload_to='contacts_photo/', blank=True, null=True)
+    photo = models.ImageField(upload_to='contacts_photo/', default='img.png', blank=True, null=True)
     #objects = models.Manager()
 
     def __str__(self):

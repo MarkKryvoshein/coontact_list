@@ -14,35 +14,47 @@
                     <th scope="col">Name</th>
                     <th scope="col">Phone</th>
                     <th scope="col">Email</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 {% for contact in contacts %}
-                <tr>
+
+                <a href="{% url 'about_contact' contact.id %}">
+                <tr onclick="window.location='{% url 'about_contact' contact.id %}';" style="cursor: pointer;">
                     <td>
-                        {% if contact.photo  %}
                         <img src="{{ contact.photo.url }}" alt="Contacts_photo" width="50">
-                        {% else  %}
-                        <img src="/media/img.png" alt="Default_photo" width="50">
-                        {% endif %}
                     </td>
                     <td>{{ contact.last_name }}</td>
                     <td>{{ contact.first_name }}</td>
                     <td>{{ contact.phone }}</td>
                     <td>{{ contact.email }}</td>
+                    <td>
+
+                        <form method="post" action="{% url 'contact_list' %}">
+                            {% csrf_token %}
+                        <input type="hidden" name="id" value="{{ contact.id }}">
+                        <button class="deleteButton" type="submit">Видалити</button>
+                        </form>
+
+                    </td>
+
                 </tr>
+                    </a>
                 {% endfor %}
             </tbody>
         </table>
     </div>
 
     <div class="something">
-        <h1>Create</h1>
-        <a class="nav-link active" href="add_contact">
-            <img src="{% static 'svg/icons.svg' %}" width="25px"/>
+        <span>
+        <h1>Create</h1><a class="nav-link active" href="add_contact">
+    <svg width="25px">
+        <use xlink:href="{% static 'svg/icons.svg' %}#person-plus"></use>
+    </svg>
+</a>
 
-
-        </a>
+        </span>
     </div>
 </div>
 

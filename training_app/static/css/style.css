@@ -12,6 +12,21 @@ body {
     gap: 20px;
     height: 100vh;
     margin-top: 20px;
+
+}
+.navbar-brand{
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+    border: 2px solid black; /* Чорна рамка товщиною 2px */
+    padding: 5px; /* Додає відступи всередині рамки */
+    border-radius: 5px; /* Закруглює кути рамки */
+}
+.navbar-brand:hover{
+    color: green;
+}
+.navbar-brand:after{
+    color: black;
 }
 
 /* Стилізація таблиці */
@@ -151,4 +166,74 @@ tr:hover {
     width: 30%;
     background-color: #e9ecef;
     padding: 20px;
+}
+
+.deleteButton{
+  color: #eee;
+  padding: 7px 13px;
+  border: none;
+  border-radius: 1px;
+  background: #50ac54;
+}
+.deleteButton:hover{
+  background: #c0392b;
+}
+.deleteButton:active{
+  background: #e74c3c;
+}
+
+
+
+
+.profile-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.photo-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 2px solid green;
+}
+
+.photo-circle img {
+    width: 100%;
+    height: auto;
+}
+
+.personal-info {
+    color: black;
+}
+
+.name, .last-name, .email, .phone-line {
+    margin: 10px 0;
+     display: block; /* Забезпечує правильне розташування */
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 3px;
+    border-bottom: 2px solid green; /* Додає лінію під текстом */
+    width: fit-content;
+    margin: 0 auto;
+    padding:5px;
+}
+
+.phone input {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid green;
+    border-radius: 5px;
 }
