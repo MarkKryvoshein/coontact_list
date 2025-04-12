@@ -25,7 +25,8 @@ urlpatterns = [
     path('', views.contact_list, name = "contact_list"),
     path('add_contact', views.add_contact),
     path('about_contact<int:contact_id>', views.about_contact, name='about_contact'),
-    path('/edit<int:pk>', views.edit_contact),
+    path('edit_contact', views.edit_contact),
+    path('edit_contact<int:pk>', views.edit_contact),
 
 ]
 

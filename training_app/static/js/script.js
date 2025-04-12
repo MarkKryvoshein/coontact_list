@@ -15,9 +15,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
       selectedContactId = this.dataset.contactId;
 
-      editButton.href = `/edit/${selectedContactId}`
+      editButton.href = `edit/${selectedContactId}/`
 
     });
   });
+
+  window.toggleDetails = function(row){
+    const contactId = row.dataset.contactId;
+    const detailsRow = document.getElementById('details-' + contactId);
+
+    if (detailsRow.style.display === 'none'){
+        detailsRow.style.display === 'table-row';
+    }
+    else{
+        detailsRow.style.display === 'none';
+    }
+
+
+
+  }
+
+
 
 });

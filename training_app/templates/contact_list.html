@@ -21,7 +21,7 @@
                 {% for contact in contacts %}
 
                 <a href="{% url 'about_contact' contact.id %}">
-                <tr onclick="window.location='{% url 'about_contact' contact.id %}';" style="cursor: pointer;">
+                <tr onclick="window.location='{% url 'about_contact' contact.id %}';" style="cursor: pointer;" onmouseover="toggleDetails(this)">
                     <td>
                         <img src="{{ contact.photo.url }}" alt="Contacts_photo" width="50">
                     </td>
@@ -38,9 +38,17 @@
                         </form>
 
                     </td>
-
                 </tr>
                     </a>
+                <!-- ----------------------------------------------------------------------------------------- -->
+                         <tr id="details-{{ contact.id }}" style="display: None;">
+                                <td colspan="6">
+                                    <div>
+                                        <a href="#">Call</a>
+                                        <a href="#">Write</a>
+                                    </div>
+
+                </tr>
                 {% endfor %}
             </tbody>
         </table>
@@ -49,9 +57,13 @@
     <div class="something">
         <span>
         <h1>Create</h1><a class="nav-link active" href="add_contact">
-    <svg width="25px">
-        <use xlink:href="{% static 'svg/icons.svg' %}#person-plus"></use>
-    </svg>
+  <svg class="svg-style" xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 100 100"
+     width="30" height="30">
+    <use xlink:href="/static/svg/icons.svg#person-plus"></use>
+</svg>
+            <h1><a class="nav-link" href="edit_contact">Edit</a></h1>
+
 </a>
 
         </span>

@@ -237,3 +237,11 @@ tr:hover {
     border: 2px solid green;
     border-radius: 5px;
 }
+.nav-link{
+  text-decoration: none; /* прибирає підкреслення */
+  color: black;
+}
+
+.nav-link:visited {
+    background: black;
+}
